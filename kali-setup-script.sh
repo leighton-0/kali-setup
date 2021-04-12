@@ -52,10 +52,16 @@ cp "/home/$(fgrep 1000:1000 /etc/passwd | cut -d: -f1)/.bashrc" /root/.bashrc
     printf '[+] copy aliases file from github bash_aliases file'
     printf '============================================================\n\n'
 
-# copy aliases file from github bash_aliases file
 rm -r .bash_aliases
 wget https://raw.githubusercontent.com/leighton-0/kali-setup/master/.bash_aliases
     sleep 5
+
+   printf '\n============================================================\n'
+    printf '[+] copy (sources.list.d) non-kali repositories to /etc/apt/'
+    printf '============================================================\n\n'
+
+rm -r /etc/apt/sources.list.d
+wget -P '/etc/apt/' https://raw.githubusercontent.com/leighton-0/kali-setup/master/sources.list.d   88888888888  check 8888888888888
 
 # enable command aliasing
 shopt -s expand_aliases

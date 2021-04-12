@@ -48,10 +48,14 @@ cp /root/.bashrc /root/.bashrc.bak
 cp "/home/$(fgrep 1000:1000 /etc/passwd | cut -d: -f1)/.bashrc" /root/.bashrc
 . /root/.bashrc
 
+   printf '\n============================================================\n'
+    printf '[+] copy aliases file from github bash_aliases file'
+    printf '============================================================\n\n'
+
 # copy aliases file from github bash_aliases file
 rm -r .bash_aliases
 wget https://raw.githubusercontent.com/leighton-0/kali-setup/master/.bash_aliases
-
+    sleep 5
 
 # enable command aliasing
 shopt -s expand_aliases
@@ -73,7 +77,7 @@ then
     printf '\n============================================================\n'
     printf '[+] Disabling Auto-lock, Sleep on AC\n'
     printf '============================================================\n\n'
-    sleep 10
+    sleep 5
     # disable session idle
     gsettings set org.gnome.desktop.session idle-delay 0
     # disable sleep when on AC power
@@ -147,7 +151,7 @@ fi
 
 
 
-# install pip because FUCKING OFFSEC removed it from the kali repos
+# install pip
 #cd /root/Downloads
 #curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 #python get-pip.py
@@ -178,8 +182,6 @@ apt-get remove gnome-software
 printf '\n============================================================\n'
 printf '[+] Installing:\n'
 printf '     - wireless drivers\n'
-printf '     - golang & environment NOT INSTALLED\n'
-printf '     - docker NOT INSTALLED\n'
 printf '     - powershell\n'
 printf '     - terminator\n'
 printf '     - pip & pipenv\n'
@@ -195,8 +197,6 @@ printf '     - hcxtools (hashcat)\n'
 printf '============================================================\n\n'
 apt-get install \
     realtek-rtl88xxau-dkms \
-    #golang \
-    #docker.io \
     powershell \
     terminator \
     python3-dev \
@@ -211,8 +211,7 @@ apt-get install \
     nfs-kernel-server \
     dnsmasq \
     hcxtools \
-    mosh \
-    vim
+    mosh
 
 # change config file for terminator to 3 pane
 rm -r .config/terminator/config
@@ -236,11 +235,6 @@ set -g @plugin 'tmux-plugins/tmux-logging'
 run '~/.tmux/plugins/tpm/tpm'
 EOF
 
-# enable and start docker
-systemctl stop docker &>/dev/null
-echo '{"bip":"172.16.199.1/24"}' > /etc/docker/daemon.json
-systemctl enable docker --now
-
 # initialize mitmproxy cert
 mitmproxy &>/dev/null &
 sleep 5
@@ -248,15 +242,6 @@ killall mitmproxy
 # trust certificate
 cp ~/.mitmproxy/mitmproxy-ca-cert.cer /usr/local/share/ca-certificates/mitmproxy-ca-cert.crt
 update-ca-certificates
-
-mkdir -p /root/.go
-gopath_exp='export GOPATH="$HOME/.go"'
-path_exp='export PATH="/usr/local/go/bin:$GOPATH/bin:$PATH"'
-sed -i '/export GOPATH=.*/c\' ~/.profile
-sed -i '/export PATH=.*GOPATH.*/c\' ~/.profile
-echo $gopath_exp | tee -a "$HOME/.profile"
-grep -q -F "$path_exp" "$HOME/.profile" || echo $path_exp | tee -a "$HOME/.profile"
-. "$HOME/.profile"
 
 # enable NFS server (without any shares)
 systemctl enable nfs-server

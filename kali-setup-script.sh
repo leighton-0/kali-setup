@@ -53,8 +53,8 @@ rm -r .bash_aliases
 #mkdir -r .bash_aliases
 #cd .bash_aliases
 #curl -k -s https://raw.githubusercontent.com/leighton-0/kali-setup/master/.bash_aliases
-#wget -P '.bash_aliases' https://raw.githubusercontent.com/leighton-0/kali-setup/master/.bash_aliases
-wget -P https://raw.githubusercontent.com/leighton-0/kali-setup/master/.bash_aliases
+wget -P '.bash_aliases' https://raw.githubusercontent.com/leighton-0/kali-setup/master/.bash_aliases
+#wget -P https://raw.githubusercontent.com/leighton-0/kali-setup/master/.bash_aliases
 #cd ..
 
 

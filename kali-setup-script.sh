@@ -65,13 +65,15 @@ printf '\n============================================================\n'
  touch /etc/systemd/system/changemac@.service
 wget -P /etc/systemd/system https://raw.githubusercontent.com/leighton-0/kali-setup/master/changemac@.service
 systemctl enable changemac@wlan1.service
-
+sleep $s
 
    printf '\n============================================================\n'
     #printf '[+] copy sources.list.d non-kali repositories to /etc/apt/'
     printf '============================================================\n\n'
 rm -r /etc/apt/sources.list.d
 wget -P '/etc/apt/' https://raw.githubusercontent.com/leighton-0/kali-setup/master/sources.list.d 
+sleep $s
+
 
 # enable command aliasing
 shopt -s expand_aliases

@@ -25,6 +25,16 @@ alias his='history | grep'
 #journalctl -f
 
 #+++++++++++++++++++++++++++++++++++++++++++
+airgeddon ()  {
+	cd airgeddon
+	./airgeddon.sh
+}
+#+++++++++++++++++++++++++++++++++++++++++++
+
+
+
+
+#+++++++++++++++++++++++++++++++++++++++++++
 fluxion ()  {
 	cd fluxion
 	./fluxion.sh

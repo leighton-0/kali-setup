@@ -50,9 +50,10 @@ cp "/home/$(fgrep 1000:1000 /etc/passwd | cut -d: -f1)/.bashrc" /root/.bashrc
 
 # create bash_aliases file
 mkdir -r .bash_aliases
-cd .bash_aliases
-curl -k -s https://raw.githubusercontent.com/leighton-0/kali-setup/master/aliases
-cd ..
+#cd .bash_aliases
+#curl -k -s https://raw.githubusercontent.com/leighton-0/kali-setup/master/aliases
+wget -P '.bash_aliases' https://raw.githubusercontent.com/leighton-0/kali-setup/master/aliases
+#cd ..
 
 
 # enable command aliasing
@@ -222,6 +223,11 @@ apt-get install \
     hcxtools \
     mosh \
     vim
+
+# change config file for terminator to 3 pane
+wget -P '.config/terminator/config' https://raw.githubusercontent.com/leighton-0/kali-setup/master/config
+
+
 python2 -m pip install pipenv
 python3 -m pip install pipenv
 apt-get remove mitmproxy

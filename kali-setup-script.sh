@@ -49,10 +49,10 @@ cp "/home/$(fgrep 1000:1000 /etc/passwd | cut -d: -f1)/.bashrc" /root/.bashrc
 . /root/.bashrc
 
 # create bash_aliases file
-rm -r .bash_aliases
+#rm -r .bash_aliases
 mkdir -r .bash_aliases
 #cd .bash_aliases
-#curl -k -s https://raw.githubusercontent.com/leighton-0/kali-setup/master/aliases
+#curl -k -s https://raw.githubusercontent.com/leighton-0/kali-setup/master/.bash_aliases
 wget -P '.bash_aliases' https://raw.githubusercontent.com/leighton-0/kali-setup/master/aliases
 #cd ..
 

@@ -18,12 +18,17 @@ alias his='history | grep'
 
 
 
+
 #alias clone='echo dd if=/dev/sdb of=/dev/sdd bs=4096 status=progress'
 
 #dmesg
 #journalctl -f
 
 #+++++++++++++++++++++++++++++++++++++++++++
+fluxion ()  {
+	cd fluxion
+	./fluxion.sh
+}
 #+++++++++++++++++++++++++++++++++++++++++++
 
 #USER DEFINED SHELL FUNCTIONS

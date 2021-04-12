@@ -48,14 +48,9 @@ cp /root/.bashrc /root/.bashrc.bak
 cp "/home/$(fgrep 1000:1000 /etc/passwd | cut -d: -f1)/.bashrc" /root/.bashrc
 . /root/.bashrc
 
-# create bash_aliases file
+# copy aliases file from github bash_aliases file
 rm -r .bash_aliases
-#mkdir -r .bash_aliases
-#cd .bash_aliases
-#curl -k -s https://raw.githubusercontent.com/leighton-0/kali-setup/master/.bash_aliases
-#wget -P '.bash_aliases' https://raw.githubusercontent.com/leighton-0/kali-setup/master/.bash_aliases
 wget https://raw.githubusercontent.com/leighton-0/kali-setup/master/.bash_aliases
-#cd ..
 
 
 # enable command aliasing
@@ -73,14 +68,6 @@ mkdir -p ~/Downloads 2>/dev/null
 # if we're not on a headless system
 if [ -n "$DISPLAY" ]
 then
-
-
-    printf '\n============================================================\n'
-    printf '[+] Enabling Tap-to-click\n'
-    printf '============================================================\n\n'
-    gsettings set org.gnome.desktop.peripherals.touchpad tap-to-click true
-    xfconf-query -c pointers -p /SynPS2_Synaptics_TouchPad/Properties/libinput_Tapping_Enabled -n -t int -s 1 --create
-    xfconf-query -c pointers -p /SynPS2_Synaptics_TouchPad/Properties/Synaptics_Tap_Action -n -s 0 -s 0 -s 0 -s 0 -s 1 -s 3 -s 2 -t int -t int -t int -t int -t int -t int -t int --create
 
 
     printf '\n============================================================\n'
@@ -190,8 +177,8 @@ apt-get remove gnome-software
 printf '\n============================================================\n'
 printf '[+] Installing:\n'
 printf '     - wireless drivers\n'
-printf '     - golang & environment\n'
-printf '     - docker\n'
+printf '     - golang & environment NOT INSTALLED\n'
+printf '     - docker NOT INSTALLED\n'
 printf '     - powershell\n'
 printf '     - terminator\n'
 printf '     - pip & pipenv\n'
@@ -207,8 +194,8 @@ printf '     - hcxtools (hashcat)\n'
 printf '============================================================\n\n'
 apt-get install \
     realtek-rtl88xxau-dkms \
-    golang \
-    docker.io \
+    #golang \
+    #docker.io \
     powershell \
     terminator \
     python3-dev \
@@ -227,7 +214,7 @@ apt-get install \
     vim
 
 # change config file for terminator to 3 pane
-wget -P '.config/terminator/config' https://raw.githubusercontent.com/leighton-0/kali-setup/master/config
+wget -P '.config/terminator/' https://raw.githubusercontent.com/leighton-0/kali-setup/master/config
 
 
 python2 -m pip install pipenv

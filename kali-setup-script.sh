@@ -48,6 +48,10 @@ cp /root/.bashrc /root/.bashrc.bak
 cp "/home/$(fgrep 1000:1000 /etc/passwd | cut -d: -f1)/.bashrc" /root/.bashrc
 . /root/.bashrc
 
+# create bash_aliases file
+mkdir TEST
+
+
 # enable command aliasing
 shopt -s expand_aliases
 

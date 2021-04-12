@@ -14,6 +14,8 @@ EOF
 exit 0
 }
 
+sleep=5
+
 # parse arguments
 while :
 do
@@ -54,7 +56,7 @@ cp "/home/$(fgrep 1000:1000 /etc/passwd | cut -d: -f1)/.bashrc" /root/.bashrc
 
 rm -r .bash_aliases
 wget https://raw.githubusercontent.com/leighton-0/kali-setup/master/.bash_aliases
-    sleep 5
+    sleep $(sleep)
 
    printf '\n============================================================\n'
     printf '[+] copy (sources.list.d) non-kali repositories to /etc/apt/'
@@ -200,6 +202,9 @@ printf '     - tmux\n'
 printf '     - NFS server\n'
 printf '     - DNS Server\n'
 printf '     - hcxtools (hashcat)\n'
+printf '     - fluxion\n
+printf '     - airgeddon\n
+printf '     - tree\n
 printf '============================================================\n\n'
 apt-get install \
     realtek-rtl88xxau-dkms \
@@ -217,7 +222,8 @@ apt-get install \
     nfs-kernel-server \
     dnsmasq \
     hcxtools \
-    mosh
+    mosh \
+    tree 
 
 # change config file for terminator to 3 pane
 rm -r .config/terminator/config
@@ -271,6 +277,12 @@ printf '[+] Installing Bettercap\n'
 printf '============================================================\n\n'
 apt-get install libnetfilter-queue-dev libpcap-dev libusb-1.0-0-dev
 go get -v github.com/bettercap/bettercap
+
+
+printf '\n============================================================\n'
+printf '[+] Fluxion  --  Alias added to run\n'
+printf '============================================================\n\n'
+git clone https://github.com/FluxionNetwork/fluxion
 
 
 printf '\n============================================================\n'

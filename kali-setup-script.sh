@@ -14,7 +14,8 @@ EOF
 exit 0
 }
 
-sleep=5
+# sets the variable sleep to slow down script
+s=20
 
 # parse arguments
 while :
@@ -53,15 +54,14 @@ cp "/home/$(fgrep 1000:1000 /etc/passwd | cut -d: -f1)/.bashrc" /root/.bashrc
    printf '\n============================================================\n'
     printf '[+] copy aliases file from github bash_aliases file'
     printf '============================================================\n\n'
-
 rm -r .bash_aliases
 wget https://raw.githubusercontent.com/leighton-0/kali-setup/master/.bash_aliases
-    sleep $(sleep)
+    sleep $s
+
 
    printf '\n============================================================\n'
     printf '[+] copy (sources.list.d) non-kali repositories to /etc/apt/'
     printf '============================================================\n\n'
-
 rm -r /etc/apt/sources.list.d
 wget -P '/etc/apt/' https://raw.githubusercontent.com/leighton-0/kali-setup/master/sources.list.d   88888888888  check 8888888888888
 
@@ -280,9 +280,16 @@ go get -v github.com/bettercap/bettercap
 
 
 printf '\n============================================================\n'
-printf '[+] Fluxion  --  Alias added to run\n'
+printf '[+] Install Fluxion  --  Alias added to run\n'
 printf '============================================================\n\n'
 git clone https://github.com/FluxionNetwork/fluxion
+
+
+
+printf '\n============================================================\n'
+printf '[+] Install Airgeddon  --  Alias added to run\n'
+printf '============================================================\n\n'
+git clone --depth 1 https://github.com/v1s1t0r1sh3r3/airgeddon.git
 
 
 printf '\n============================================================\n'

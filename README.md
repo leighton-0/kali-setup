@@ -2,15 +2,13 @@
 
 Prepares Kali for a pentest by enabling session logging, installing tools, and making common configuration changes
 
-<img alt="XFCE + Gnome" src="https://user-images.githubusercontent.com/20261699/77855493-cd481680-71be-11ea-8019-20681c643b0d.PNG" width=500>
-
 ## NOTE: THIS SCRIPT ASSUMES YOU ARE RUNNING AS ROOT (LIKE IN THE OLD DAYS)
 ## NON-ROOT USERS ARE NOT SUPPORTED
 
 ## One-liner:
 (don't forget to reboot after the script finishes :)
 ~~~
-curl -k -s https://raw.githubusercontent.com/blacklanternsecurity/kali-setup-script/master/kali-setup-script.sh | bash
+curl -k -s https://raw.githubusercontent.com/leighton-0/kali-setup-script/master/kali-setup-script.sh | bash
 ~~~
 
 ## Full feature list:

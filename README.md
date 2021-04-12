@@ -25,12 +25,9 @@ curl -k -s https://raw.githubusercontent.com/leighton-0/kali-setup/master/kali-s
 	1. Gowitness
 	1. EavesARP
 	1. bettercap
-	1. docker
 	1. Firefox (official non-ESR version)
 	1. Chromium
 	1. Sublime Text
-	1. BoostNote
-	1. golang (plus environment)
 	1. zmap
 	1. LibreOffice
 	1. htop
@@ -45,5 +42,6 @@ curl -k -s https://raw.githubusercontent.com/leighton-0/kali-setup/master/kali-s
 1. Initializes Metasploit database
 1. Installs rad BLS wallpaper
 
-
+========================================================================================================
 Original script by  blacklanternsecurity I have deleted some to the apps and customised it to my needs
+=========================================================================================================

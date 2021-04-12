@@ -44,3 +44,6 @@ curl -k -s https://raw.githubusercontent.com/leighton-0/kali-setup/master/kali-s
 1. Enables tap-to-click
 1. Initializes Metasploit database
 1. Installs rad BLS wallpaper
+
+
+Original script by  blacklanternsecurity I have deleted some to the apps and customised it to my needs

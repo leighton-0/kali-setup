@@ -73,6 +73,7 @@ then
     printf '\n============================================================\n'
     printf '[+] Disabling Auto-lock, Sleep on AC\n'
     printf '============================================================\n\n'
+    sleep 10
     # disable session idle
     gsettings set org.gnome.desktop.session idle-delay 0
     # disable sleep when on AC power

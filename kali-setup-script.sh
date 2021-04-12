@@ -214,6 +214,7 @@ apt-get install \
     vim
 
 # change config file for terminator to 3 pane
+rm -r .config/terminator/config
 wget -P '.config/terminator/' https://raw.githubusercontent.com/leighton-0/kali-setup/master/config
 
 

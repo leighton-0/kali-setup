@@ -1,5 +1,8 @@
 #!/bin/bash
 
+<< 'MULTILINE-COMMENT'
+MULTILINE-COMMENT
+
 usage()
 {
     cat <<EOF

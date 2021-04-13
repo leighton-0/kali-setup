@@ -44,7 +44,7 @@ sleep $s
 printf '\n============================================================\n'
     printf '[+] Auto MAC spoof on start up - assuming wlan0'
     printf '============================================================\n\n'
- touch /etc/systemd/system/changemac@.service
+ #touch /etc/systemd/system/changemac@.service
 wget -P /etc/systemd/system https://raw.githubusercontent.com/leighton-0/kali-setup/master/changemac@.service
 systemctl enable changemac@wlan0.service
 sleep $s

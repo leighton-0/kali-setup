@@ -62,7 +62,7 @@ sleep $s
    printf '[+] install NordVPN'
    printf '============================================================\n\n'
 wget https://raw.githubusercontent.com/leighton-0/kali-setup/master/nordvpn-release_1.0.0_all.deb
-apt-get install nordvpn-release_1.0.0_all.deb
+apt-get install ./nordvpn-release_1.0.0_all.deb
 apt-get update
 apt-get install nordvpn
 sleep $s

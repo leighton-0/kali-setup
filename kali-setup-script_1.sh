@@ -40,7 +40,6 @@ apt-get update
 apt-get install nordvpn
 sleep $s
 
-<< 'MULTILINE-COMMENT'
 
 printf '\n============================================================\n'
     printf '[+] Auto MAC spoof on start up - assuming wlan0'
@@ -50,6 +49,8 @@ wget -P /etc/systemd/system https://raw.githubusercontent.com/leighton-0/kali-se
 systemctl enable changemac@wlan0.service
 sleep $s
 
+
+<< 'MULTILINE-COMMENT'
 
    printf '\n============================================================\n'
     #printf '[+] copy sources.list.d non-kali repositories to /etc/apt/'

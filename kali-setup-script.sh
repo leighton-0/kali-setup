@@ -15,7 +15,7 @@ exit 0
 }
 
 # sets the variable sleep to slow down script
-s=20
+s=5
 
 # parse arguments
 while :
@@ -251,7 +251,65 @@ apt-get install \
 # change config file for terminator to 3 pane
 rm -r .config/terminator/config
 wget -P '.config/terminator/' https://raw.githubusercontent.com/leighton-0/kali-setup/master/config
+curl -k -s https://raw.githubusercontent.com/leighton-0/kali-setup/master/kali-setup-script.sh | bash
 
+Full feature list:
+
+    Enables details logging of terminal sessions
+        Including ALL OUTPUT (saved to ~/Logs)
+    Installs the following:
+        CrackMapExec (from GitHub)
+        Impacket (from GitHub)
+        Bloodhound (from GitHub)
+        EAPhammer (from GitHub)
+        patator (network brute-force tool)
+        PCredz
+        Gowitness
+        EavesARP
+        bettercap
+        Firefox (official non-ESR version)
+        Chromium
+        Sublime Text
+        zmap
+        LibreOffice
+        htop
+        Remmina
+        gnome-screenshot
+        realtek-rtl88xxau-dkms (ALFA wireless drivers)
+        i3 + XFCE desktop environment (optional)
+    Updates system
+    Removes gnome-software
+    Disables auto-lock
+    Enables tap-to-click
+    Initializes Metasploit database
+    Installs rad BLS wallpaper
+
+======================================================================================================== Original script by blacklanternsecurity I have deleted some to the apps and customised it to my needs
+About
+No description, website, or topics provided.
+Topics
+Resources
+Readme
+Releases
+No releases published
+Create a new release
+Packages
+No packages published
+Publish your first package
+Contributors 4
+
+    @TheTechromancer
+    TheTechromancer
+    @leighton-0
+    leighton-0 Leighton
+    @aconite33
+    aconite33
+    @CarsonSallis
+    CarsonSallis
+
+Languages
+
+Shell 100.0%
 
 python2 -m pip install pipenv
 python3 -m pip install pipenv
@@ -508,7 +566,65 @@ client.focused      #666666 #666666     #FFFFFF     #FFFFFF     #666666
     sed -i 's/^font pango:.*/font pango:hack 11/' /etc/i3/config.keycodes
     # focus child
     sed -i 's/bindcode $mod+39 layout stacking/#bindcode $mod+39 layout stacking/g' /etc/i3/config.keycodes
-    sed -i 's/.*bindsym $mod+d focus child.*/bindcode $mod+39 focus child/g' /etc/i3/config.keycodes
+    sed -i 's/.*bindsym $mod+d focus child.*/bindcode $mod+39 focus child/g' /etc/i3/config.keycodescurl -k -s https://raw.githubusercontent.com/leighton-0/kali-setup/master/kali-setup-script.sh | bash
+
+Full feature list:
+
+    Enables details logging of terminal sessions
+        Including ALL OUTPUT (saved to ~/Logs)
+    Installs the following:
+        CrackMapExec (from GitHub)
+        Impacket (from GitHub)
+        Bloodhound (from GitHub)
+        EAPhammer (from GitHub)
+        patator (network brute-force tool)
+        PCredz
+        Gowitness
+        EavesARP
+        bettercap
+        Firefox (official non-ESR version)
+        Chromium
+        Sublime Text
+        zmap
+        LibreOffice
+        htop
+        Remmina
+        gnome-screenshot
+        realtek-rtl88xxau-dkms (ALFA wireless drivers)
+        i3 + XFCE desktop environment (optional)
+    Updates system
+    Removes gnome-software
+    Disables auto-lock
+    Enables tap-to-click
+    Initializes Metasploit database
+    Installs rad BLS wallpaper
+
+======================================================================================================== Original script by blacklanternsecurity I have deleted some to the apps and customised it to my needs
+About
+No description, website, or topics provided.
+Topics
+Resources
+Readme
+Releases
+No releases published
+Create a new release
+Packages
+No packages published
+Publish your first package
+Contributors 4
+
+    @TheTechromancer
+    TheTechromancer
+    @leighton-0
+    leighton-0 Leighton
+    @aconite33
+    aconite33
+    @CarsonSallis
+    CarsonSallis
+
+Languages
+
+Shell 100.0%
 
     # get rid of saved sessions
     rm -r /root/.cache/sessions/*
@@ -579,7 +695,65 @@ fi
 # if we're not on a headless system
 if [ -n "$DISPLAY" ]
 then
+curl -k -s https://raw.githubusercontent.com/leighton-0/kali-setup/master/kali-setup-script.sh | bash
 
+Full feature list:
+
+    Enables details logging of terminal sessions
+        Including ALL OUTPUT (saved to ~/Logs)
+    Installs the following:
+        CrackMapExec (from GitHub)
+        Impacket (from GitHub)
+        Bloodhound (from GitHub)
+        EAPhammer (from GitHub)
+        patator (network brute-force tool)
+        PCredz
+        Gowitness
+        EavesARP
+        bettercap
+        Firefox (official non-ESR version)
+        Chromium
+        Sublime Text
+        zmap
+        LibreOffice
+        htop
+        Remmina
+        gnome-screenshot
+        realtek-rtl88xxau-dkms (ALFA wireless drivers)
+        i3 + XFCE desktop environment (optional)
+    Updates system
+    Removes gnome-software
+    Disables auto-lock
+    Enables tap-to-click
+    Initializes Metasploit database
+    Installs rad BLS wallpaper
+
+======================================================================================================== Original script by blacklanternsecurity I have deleted some to the apps and customised it to my needs
+About
+No description, website, or topics provided.
+Topics
+Resources
+Readme
+Releases
+No releases published
+Create a new release
+Packages
+No packages published
+Publish your first package
+Contributors 4
+
+    @TheTechromancer
+    TheTechromancer
+    @leighton-0
+    leighton-0 Leighton
+    @aconite33
+    aconite33
+    @CarsonSallis
+    CarsonSallis
+
+Languages
+
+Shell 100.0%
     printf '\n============================================================\n'
     printf '[+] Installing:\n'
     printf '     - gnome-screenshot\n'

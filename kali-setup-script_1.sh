@@ -29,17 +29,18 @@ wget https://raw.githubusercontent.com/leighton-0/kali-setup/master/.bash_aliase
     sleep $s
     
     
-<< 'MULTILINE-COMMENT'
+
     
     printf '\n============================================================\n'
     printf '[+] install NordVPN'
     printf '============================================================\n\n'
 wget https://raw.githubusercontent.com/leighton-0/kali-setup/master/nordvpn-release_1.0.0_all.deb
-apt-get install nordvpn-release_1.0.0_all.deb
+apt-get install ./nordvpn-release_1.0.0_all.deb
 apt-get update
 apt-get install nordvpn
 sleep $s
 
+<< 'MULTILINE-COMMENT'
 
 printf '\n============================================================\n'
     printf '[+] Auto MAC spoof on start up - assuming wlan0'

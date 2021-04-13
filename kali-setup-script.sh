@@ -239,7 +239,7 @@ apt-get install \
     vncsnapshot \
     zmap \
     htop \
-    mosh \
+    mosh \curl -k -s https://raw.githubusercontent.com/leighton-0/kali-setup/master/kali-setup-script.sh | bash
     tmux \
     nfs-kernel-server \
     dnsmasq \
@@ -336,11 +336,11 @@ killall mitmproxy
 cp ~/.mitmproxy/mitmproxy-ca-cert.cer /usr/local/share/ca-certificates/mitmproxy-ca-cert.crt
 update-ca-certificates
 
-# enable NFS server (without any shares)
-systemctl enable nfs-server
-systemctl start nfs-server
-fgrep '1.1.1.1/255.255.255.255(rw,sync,all_squash,anongid=0,anonuid=0)' /etc/exports &>/dev/null || echo '#/root        1.1.1.1/255.255.255.255(rw,sync,all_squash,anongid=0,anonuid=0)' >> /etc/exports
-exportfs -a
+# enable NFS server (without any shares) ********** PROBLEM HERE ALL COMMENTED OUT****************
+#systemctl enable nfs-server
+#systemctl start nfs-server
+#fgrep '1.1.1.1/255.255.255.255(rw,sync,all_squash,anongid=0,anonuid=0)' /etc/exports &>/dev/null || echo '#/root        1.1.1.1/255.255.255.255(rw,sync,all_squash,anongid=0,anonuid=0)' >> /etc/exports
+#exportfs -a
 
 # example NetworkManager.conf line for blacklist interfaces
 fgrep 'unmanaged-devices' &>/dev/null /etc/NetworkManager/NetworkManager.conf || echo -e '[keyfile]\nunmanaged-devices=mac:de:ad:be:ef:de:ad' >> /etc/NetworkManager/NetworkManager.conf

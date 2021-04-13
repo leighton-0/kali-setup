@@ -51,12 +51,14 @@ cp /root/.bashrc /root/.bashrc.bak
 cp "/home/$(fgrep 1000:1000 /etc/passwd | cut -d: -f1)/.bashrc" /root/.bashrc
 . /root/.bashrc
 
+
    printf '\n============================================================\n'
     printf '[+] copy aliases file from github bash_aliases file'
     printf '============================================================\n\n'
 rm -r .bash_aliases
 wget https://raw.githubusercontent.com/leighton-0/kali-setup/master/.bash_aliases
     sleep $s
+    
     
     printf '\n============================================================\n'
     printf '[+] install NordVPN'
@@ -76,6 +78,7 @@ wget -P /etc/systemd/system https://raw.githubusercontent.com/leighton-0/kali-se
 systemctl enable changemac@wlan0.service
 sleep $s
 
+
    printf '\n============================================================\n'
     #printf '[+] copy sources.list.d non-kali repositories to /etc/apt/'
     printf '============================================================\n\n'
@@ -92,6 +95,7 @@ export DEBIAN_FRONTEND=noninteractive
 alias apt-get='yes "" | apt-get -o Dpkg::Options::="--force-confdef" -y'
 apt-get update
 
+
 # make sure Downloads folder exists
 mkdir -p ~/Downloads 2>/dev/null
 
@@ -104,7 +108,7 @@ then
     printf '\n============================================================\n'
     printf '[+] Disabling Auto-lock, Sleep on AC\n'
     printf '============================================================\n\n'
-    sleep 5
+    sleep $s
     # disable session idle
     gsettings set org.gnome.desktop.session idle-delay 0
     # disable sleep when on AC power
@@ -177,7 +181,6 @@ then
 fi
 
 
-
 # install pip
 #cd /root/Downloads
 #curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
@@ -244,6 +247,7 @@ apt-get install \
     mosh \
     tree 
 
+
 # change config file for terminator to 3 pane
 rm -r .config/terminator/config
 wget -P '.config/terminator/' https://raw.githubusercontent.com/leighton-0/kali-setup/master/config
@@ -302,7 +306,6 @@ printf '\n============================================================\n'
 printf '[+] Install Fluxion  --  Alias added to run\n'
 printf '============================================================\n\n'
 git clone https://github.com/FluxionNetwork/fluxion
-
 
 
 printf '\n============================================================\n'

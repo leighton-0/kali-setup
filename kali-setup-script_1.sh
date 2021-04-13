@@ -5,7 +5,7 @@
 
 
 # sets the variable sleep to slow down script
-s=10
+s=5
 
 # make sure we're root
 if [ "$HOME" != "/root" ]
@@ -28,6 +28,11 @@ wget https://raw.githubusercontent.com/leighton-0/kali-setup/master/.bash_aliase
     . .bashrc && . .bash_aliases
     sleep $s
     
+     printf '\n============================================================\n'
+    printf '[+] install gedit'
+    printf '============================================================\n\n'
+apt-get install gedit
+sleep $s
     
 
     

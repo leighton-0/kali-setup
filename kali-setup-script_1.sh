@@ -35,6 +35,9 @@ do
     shift
 done
 
+# sets the variable sleep to slow down script
+s=5
+
 # make sure we're root
 if [ "$HOME" != "/root" ]
 then
@@ -46,6 +49,45 @@ fi
 cp /root/.bashrc /root/.bashrc.bak
 cp "/home/$(fgrep 1000:1000 /etc/passwd | cut -d: -f1)/.bashrc" /root/.bashrc
 . /root/.bashrc
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  printf '\n============================================================\n'
+  printf '[+] copy aliases file from github bash_aliases file'
+  printf '============================================================\n\n'
+rm -r .bash_aliases
+wget https://raw.githubusercontent.com/leighton-0/kali-setup/master/.bash_aliases
+sleep $s
+
+   printf '\n============================================================\n'
+   printf '[+] install NordVPN'
+   printf '============================================================\n\n'
+wget https://raw.githubusercontent.com/leighton-0/kali-setup/master/nordvpn-release_1.0.0_all.deb
+apt-get install nordvpn-release_1.0.0_all.deb
+apt-get update
+apt-get install nordvpn
+sleep $s
+
+printf '\n============================================================\n'
+    printf '[+] Auto MAC spoof on start up - assuming wlan0'
+    printf '============================================================\n\n'
+ touch /etc/systemd/system/changemac@.service
+wget -P /etc/systemd/system https://raw.githubusercontent.com/leighton-0/kali-setup/master/changemac@.service
+systemctl enable changemac@wlan0.service
+sleep $s
+
+
+   printf '\n============================================================\n'
+    #printf '[+] copy sources.list.d non-kali repositories to /etc/apt/'
+    printf '============================================================\n\n'
+rm -r /etc/apt/sources.list.d
+wget -P '/etc/apt/' https://raw.githubusercontent.com/leighton-0/kali-setup/master/sources.list.d 
+sleep $s
+
+
+
+
+
+#++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 # enable command aliasing
 shopt -s expand_aliases

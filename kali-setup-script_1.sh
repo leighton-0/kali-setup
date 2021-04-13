@@ -25,6 +25,7 @@ cp "/home/$(fgrep 1000:1000 /etc/passwd | cut -d: -f1)/.bashrc" /root/.bashrc
     printf '============================================================\n\n'
 rm -r .bash_aliases
 wget https://raw.githubusercontent.com/leighton-0/kali-setup/master/.bash_aliases
+    . .bashrc && . .bash_aliases
     sleep $s
     
     

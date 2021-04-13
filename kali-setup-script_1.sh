@@ -31,7 +31,7 @@ wget https://raw.githubusercontent.com/leighton-0/kali-setup/master/.bash_aliase
      printf '\n============================================================\n'
     printf '[+] install gedit'
     printf '============================================================\n\n'
-apt-get install gedit
+apt install gedit
 sleep $s
     
 

@@ -50,6 +50,7 @@ cp /root/.bashrc /root/.bashrc.bak
 cp "/home/$(fgrep 1000:1000 /etc/passwd | cut -d: -f1)/.bashrc" /root/.bashrc
 . /root/.bashrc
 
+<< 'comment out'
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   printf '\n============================================================\n'
   printf '[+] copy aliases file from github bash_aliases file'
@@ -86,8 +87,9 @@ sleep $s
 
 
 
-
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+comment out
+
 
 # enable command aliasing
 shopt -s expand_aliases
@@ -130,7 +132,7 @@ then
     # hibernate when power is critical
     xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/critical-power-action -s 2 --create --type int
 
-
+    << 'comment out'
     printf '\n============================================================\n'
     printf '[+] Setting Theme\n'
     printf '============================================================\n\n'
@@ -154,7 +156,7 @@ then
     xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitor1/image-path -s /usr/share/wallpapers/wallpapers/bls_wallpaper.png
     xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitorVirtual1/workspace0/last-image -s /usr/share/wallpapers/wallpapers/bls_wallpaper.png
     xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitorVirtual1/workspace1/last-image -s /usr/share/wallpapers/wallpapers/bls_wallpaper.png
-
+    comment out
 
     printf '\n============================================================\n'
     printf '[+] Setting Default Terminal\n'

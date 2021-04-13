@@ -57,6 +57,15 @@ cp "/home/$(fgrep 1000:1000 /etc/passwd | cut -d: -f1)/.bashrc" /root/.bashrc
 rm -r .bash_aliases
 wget https://raw.githubusercontent.com/leighton-0/kali-setup/master/.bash_aliases
     sleep $s
+    
+    printf '\n============================================================\n'
+    printf '[+] install NordVPN'
+    printf '============================================================\n\n'
+wget https://raw.githubusercontent.com/leighton-0/kali-setup/master/nordvpn-release_1.0.0_all.deb
+apt-get install nordvpn-release_1.0.0_all.deb
+apt-get update
+apt-get install nordvpn
+sleep $s
 
 
 printf '\n============================================================\n'

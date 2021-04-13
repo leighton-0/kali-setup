@@ -5,7 +5,7 @@
 
 
 # sets the variable sleep to slow down script
-s=5
+s=10
 
 # make sure we're root
 if [ "$HOME" != "/root" ]
@@ -19,7 +19,6 @@ cp /root/.bashrc /root/.bashrc.bak
 cp "/home/$(fgrep 1000:1000 /etc/passwd | cut -d: -f1)/.bashrc" /root/.bashrc
 . /root/.bashrc
 
-<< 'MULTILINE-COMMENT'
 
    printf '\n============================================================\n'
     printf '[+] copy aliases file from github bash_aliases file'
@@ -28,6 +27,8 @@ rm -r .bash_aliases
 wget https://raw.githubusercontent.com/leighton-0/kali-setup/master/.bash_aliases
     sleep $s
     
+    
+<< 'MULTILINE-COMMENT'
     
     printf '\n============================================================\n'
     printf '[+] install NordVPN'

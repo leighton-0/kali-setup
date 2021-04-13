@@ -15,6 +15,8 @@ alias lmacc1='/usr/local/bin/./lmacc1.sh'
 alias lmacc0='/usr/local/bin/./lmacc0.sh'
 #alias tor='sudo -u kali -H torbrowser-launcher'
 alias his='history | grep'
+alias vpns= 'nordvpn status'
+alias vpndc= 'nordvpn connect Double_VPN'
 
 
 

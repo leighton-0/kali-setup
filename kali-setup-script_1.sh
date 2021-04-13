@@ -50,7 +50,7 @@ cp /root/.bashrc /root/.bashrc.bak
 cp "/home/$(fgrep 1000:1000 /etc/passwd | cut -d: -f1)/.bashrc" /root/.bashrc
 . /root/.bashrc
 
-<< EOF
+<<EOF
 #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   printf '\n============================================================\n'
   printf '[+] copy aliases file from github bash_aliases file'
@@ -132,7 +132,7 @@ then
     # hibernate when power is critical
     xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/critical-power-action -s 2 --create --type int
 
-    << EOF
+    <<EOF
     printf '\n============================================================\n'
     printf '[+] Setting Theme\n'
     printf '============================================================\n\n'

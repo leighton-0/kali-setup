@@ -16,7 +16,7 @@ fi
 
 # fix bashrc
 cp /root/.bashrc /root/.bashrc.bak
-cp "/home/$(fgrep 1000:1000 /etc/passwd | cut -d: -f1)/.bashrc" /root/.bashrc
+#cp "/home/$(fgrep 1000:1000 /etc/passwd | cut -d: -f1)/.bashrc" /root/.bashrc  NOT SURE WHAT THIS IS DOING!
 . /root/.bashrc
 
 

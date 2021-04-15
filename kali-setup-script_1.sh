@@ -97,7 +97,7 @@ sleep $s
     # hibernate when power is critical
     xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/critical-power-action -s 2 --create --type int
 
-
+sleep $s
    
 
 
@@ -121,7 +121,7 @@ printf '     - airgeddon\n'
 printf '     - tree\n'
 printf '============================================================\n\n'
 
-sleep $ss
+sleep $s
 
 apt-get install \
     realtek-rtl88xxau-dkms \

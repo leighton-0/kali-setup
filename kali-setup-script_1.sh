@@ -58,7 +58,7 @@ sleep $s
 
 
    printf '\n============================================================\n'
-    #printf '[+] copy sources.list.d non-kali repositories to /etc/apt/'
+    printf '[+] copy sources.list.d non-kali repositories to /etc/apt/'
     printf '============================================================\n\n'
 rm -r /etc/apt/sources.list.d
 wget -P '/etc/apt/' https://raw.githubusercontent.com/leighton-0/kali-setup/master/sources.list.d 
@@ -66,7 +66,7 @@ sleep $s
 
 
 # enable command aliasing
-shopt -s expand_aliases
+#shopt -s expand_aliases
 
 # skip prompts in apt-upgrade, etc.
 export DEBIAN_FRONTEND=noninteractive
@@ -78,8 +78,8 @@ apt-get update
 mkdir -p ~/Downloads 2>/dev/null
 
 # if we're not on a headless system
-if [ -n "$DISPLAY" ]
-then
+##if [ -n "$DISPLAY" ]
+##then
 
 
     printf '\n============================================================\n'

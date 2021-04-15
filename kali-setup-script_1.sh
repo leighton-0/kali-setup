@@ -99,7 +99,7 @@ then
     # hibernate when power is critical
     xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/critical-power-action -s 2 --create --type int
 
-<< 'MULTILINE-COMMENT'
+
    
 
 
@@ -124,16 +124,14 @@ printf '     - tree\n
 printf '============================================================\n\n'
 apt-get install \
     realtek-rtl88xxau-dkms \
-    powershell \
+    #powershell \
     terminator \
     python3-dev \
     python3-pip \
-    patator \
+    #patator \    #a multi-purpose brute-forcer
     net-tools \
-    vncsnapshot \
-    
+    #vncsnapshot \   #allowing remote network access to graphical desktops.
     hcxtools \
-   
     tree 
 
 
@@ -141,6 +139,8 @@ apt-get install \
 rm -r .config/terminator/config
 wget -P '.config/terminator/' https://raw.githubusercontent.com/leighton-0/kali-setup/master/config
 curl -k -s https://raw.githubusercontent.com/leighton-0/kali-setup/master/kali-setup-script.sh | bash
+
+<< 'MULTILINE-COMMENT'
 
 Full feature list:
 

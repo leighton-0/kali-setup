@@ -122,6 +122,9 @@ printf '     - fluxion\n
 printf '     - airgeddon\n
 printf '     - tree\n
 printf '============================================================\n\n'
+
+sleep $s
+
 apt-get install \
     realtek-rtl88xxau-dkms \
     #powershell \

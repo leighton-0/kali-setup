@@ -2,7 +2,7 @@
 
 
 # sets the variable sleep to slow down script
-s=5
+s=9
 
 # make sure we're root
 if [ "$HOME" != "/root" ]

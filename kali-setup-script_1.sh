@@ -34,7 +34,7 @@ mkdir -p ~/Downloads 2>/dev/null
     printf '============================================================\n\n'
 rm -r .bash_aliases
 wget https://raw.githubusercontent.com/leighton-0/kali-setup/master/.bash_aliases
-    . /root/.bash_aliases
+    source ~/.bash_aliases
     sleep $s
     
     printf '\n============================================================\n'

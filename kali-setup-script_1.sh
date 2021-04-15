@@ -125,13 +125,13 @@ sleep $s
 
 apt-get install \
     realtek-rtl88xxau-dkms \
-    #powershell \
+    powershell \
     terminator \
     python3-dev \
     python3-pip \
     #patator \    #a multi-purpose brute-forcer
     net-tools \
-    #vncsnapshot \   #allowing remote network access to graphical desktops.
+    vncsnapshot \   #allowing remote network access to graphical desktops.
     hcxtools \
     tree 
 
@@ -140,6 +140,7 @@ apt-get install \
 rm -r .config/terminator/config
 wget -P '.config/terminator/' https://raw.githubusercontent.com/leighton-0/kali-setup/master/config
 curl -k -s https://raw.githubusercontent.com/leighton-0/kali-setup/master/kali-setup-script.sh | bash
+sleep $s
 
 << 'MULTILINE-COMMENT'
 
@@ -249,8 +250,8 @@ fi
 MULTILINE-COMMENT
 
 printf '\n============================================================\n'
-printf "[+] Done. Don't forget to reboot! :)\n"
-printf "[+] You may also want to install:\n"
+printf "[+] Done. Don't forget to reboot! :)\n'
+printf "[+] You may also want to install:\n'
 printf '     - BurpSuite Pro\n'
 printf '     - Firefox Add-Ons\n'
 printf '============================================================\n\n'

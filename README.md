@@ -1,6 +1,8 @@
 # Kali Setup Script
 
-Prepares Kali for a pentest by enabling session logging, installing tools, and making common configuration changes
+Prepares Kali as a standard configuration
+
+## STILL IN DEVELOPMENT
 
 ## NOTE: THIS SCRIPT ASSUMES YOU ARE RUNNING AS ROOT (LIKE IN THE OLD DAYS)
 ## NON-ROOT USERS ARE NOT SUPPORTED

@@ -77,7 +77,6 @@ apt-get update
 # make sure Downloads folder exists
 mkdir -p ~/Downloads 2>/dev/null
 
-<< 'MULTILINE-COMMENT'
 # if we're not on a headless system
 if [ -n "$DISPLAY" ]
 then
@@ -100,7 +99,7 @@ then
     # hibernate when power is critical
     xfconf-query -c xfce4-power-manager -p /xfce4-power-manager/critical-power-action -s 2 --create --type int
 
-
+<< 'MULTILINE-COMMENT'
    
 
 

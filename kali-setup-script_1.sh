@@ -129,14 +129,15 @@ apt-get install \
     terminator \
     python3-dev \
     python3-pip \
-    #patator \    #a multi-purpose brute-forcer
+    patator \
     net-tools \
-    vncsnapshot \   #allowing remote network access to graphical desktops.
+    vncsnapshot \
     hcxtools \
     tree 
 
-
-# change config file for terminator to 3 pane
+    printf '\n============================================================\n'
+    printf '[+] change config file for terminator to 3 pane set up \n'
+    printf '============================================================\n\n'
 rm -r .config/terminator/config
 wget -P '.config/terminator/' https://raw.githubusercontent.com/leighton-0/kali-setup/master/config
 curl -k -s https://raw.githubusercontent.com/leighton-0/kali-setup/master/kali-setup-script.sh | bash

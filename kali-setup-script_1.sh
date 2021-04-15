@@ -30,7 +30,7 @@ apt-get update
 mkdir -p ~/Downloads 2>/dev/null
 
     printf '\n============================================================\n'
-    printf '[+] copy aliases file from github bash_aliases file'
+    printf '[+] copy aliases file from github bash_aliases file\n'
     printf '============================================================\n\n'
 rm -r .bash_aliases
 wget https://raw.githubusercontent.com/leighton-0/kali-setup/master/.bash_aliases
@@ -38,7 +38,7 @@ wget https://raw.githubusercontent.com/leighton-0/kali-setup/master/.bash_aliase
     sleep $s
     
     printf '\n============================================================\n'
-    printf '[+] install gedit'
+    printf '[+] install gedit\n'
     printf '============================================================\n\n'
 apt install -y gedit
 sleep $s
@@ -46,7 +46,7 @@ sleep $s
 
     
     printf '\n============================================================\n'
-    printf '[+] install NordVPN'
+    printf '[+] install NordVPN\n'
     printf '============================================================\n\n'
 wget https://raw.githubusercontent.com/leighton-0/kali-setup/master/nordvpn-release_1.0.0_all.deb
 apt-get install -y ./nordvpn-release_1.0.0_all.deb
@@ -56,7 +56,7 @@ sleep $s
 
 
     printf '\n============================================================\n'
-    printf '[+] Auto MAC spoof on start up - assuming wlan0'
+    printf '[+] Auto MAC spoof on start up - assuming wlan0\n'
     printf '============================================================\n\n'
  #touch /etc/systemd/system/changemac@.service
 wget -P /etc/systemd/system https://raw.githubusercontent.com/leighton-0/kali-setup/master/changemac@.service
@@ -66,7 +66,7 @@ sleep $s
 
 
     printf '\n============================================================\n'
-    printf '[+] copy sources.list.d non-kali repositories to /etc/apt/'
+    printf '[+] copy sources.list.d non-kali repositories to /etc/apt/\n'
     printf '============================================================\n\n'
 rm -r /etc/apt/sources.list.d
 wget -P '/etc/apt/' https://raw.githubusercontent.com/leighton-0/kali-setup/master/sources.list.d 
@@ -116,9 +116,9 @@ printf '     - tmux\n'
 printf '     - NFS server\n'
 printf '     - DNS Server\n'
 printf '     - hcxtools (hashcat)\n'
-printf '     - fluxion\n
-printf '     - airgeddon\n
-printf '     - tree\n
+printf '     - fluxion\n'
+printf '     - airgeddon\n'
+printf '     - tree\n'
 printf '============================================================\n\n'
 
 sleep $ss

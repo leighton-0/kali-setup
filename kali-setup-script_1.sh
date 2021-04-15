@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 # sets the variable sleep to slow down script
 s=9
 
@@ -15,7 +14,6 @@ fi
 cp /root/.bashrc /root/.bashrc.bak
 #cp "/home/$(fgrep 1000:1000 /etc/passwd | cut -d: -f1)/.bashrc" /root/.bashrc  NOT SURE WHAT THIS IS DOING!
 . /root/.bashrc
-
    
 # enable command aliasing
 shopt -s expand_aliases
@@ -24,7 +22,6 @@ shopt -s expand_aliases
 export DEBIAN_FRONTEND=noninteractive
 alias apt-get='yes "" | apt-get -o Dpkg::Options::="--force-confdef" -y'
 apt-get update
-
 
 # make sure Downloads folder exists
 mkdir -p ~/Downloads 2>/dev/null
@@ -207,14 +204,16 @@ apt-get install libnetfilter-queue-dev libpcap-dev libusb-1.0-0-dev
 go get -v github.com/bettercap/bettercap
 
 
+MULTILINE-COMMENT
+
 printf '\n============================================================\n'
-printf '[+] Install Fluxion  --  Alias added to run\n'
+printf '[+] Install Fluxion  --  Fluxion installation \n'
 printf '============================================================\n\n'
 git clone https://github.com/FluxionNetwork/fluxion
 
 
 printf '\n============================================================\n'
-printf '[+] Install Airgeddon  --  Alias added to run\n'
+printf '[+] Install Airgeddon  --  Airgeddon installation\n'
 printf '============================================================\n\n'
 git clone --depth 1 https://github.com/v1s1t0r1sh3r3/airgeddon.git
 
@@ -248,7 +247,6 @@ fi'
 
 fi
 
-MULTILINE-COMMENT
 
 printf '\n============================================================\n'
 printf "[+] Done. Don't forget to reboot! :)\n'

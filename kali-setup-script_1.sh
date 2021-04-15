@@ -1,9 +1,6 @@
 #!/bin/bash
 
 
-
-
-
 # sets the variable sleep to slow down script
 s=5
 
@@ -19,16 +16,28 @@ cp /root/.bashrc /root/.bashrc.bak
 #cp "/home/$(fgrep 1000:1000 /etc/passwd | cut -d: -f1)/.bashrc" /root/.bashrc  NOT SURE WHAT THIS IS DOING!
 . /root/.bashrc
 
+   
+# enable command aliasing
+shopt -s expand_aliases
 
-   printf '\n============================================================\n'
+# skip prompts in apt-upgrade, etc.
+export DEBIAN_FRONTEND=noninteractive
+alias apt-get='yes "" | apt-get -o Dpkg::Options::="--force-confdef" -y'
+apt-get update
+
+
+# make sure Downloads folder exists
+mkdir -p ~/Downloads 2>/dev/null
+
+    printf '\n============================================================\n'
     printf '[+] copy aliases file from github bash_aliases file'
     printf '============================================================\n\n'
 rm -r .bash_aliases
 wget https://raw.githubusercontent.com/leighton-0/kali-setup/master/.bash_aliases
-    . .bashrc && . .bash_aliases
+    . /root/.bash_aliases
     sleep $s
     
-     printf '\n============================================================\n'
+    printf '\n============================================================\n'
     printf '[+] install gedit'
     printf '============================================================\n\n'
 apt install -y gedit
@@ -46,7 +55,7 @@ apt-get install nordvpn
 sleep $s
 
 
-printf '\n============================================================\n'
+    printf '\n============================================================\n'
     printf '[+] Auto MAC spoof on start up - assuming wlan0'
     printf '============================================================\n\n'
  #touch /etc/systemd/system/changemac@.service
@@ -56,26 +65,15 @@ sleep $s
 
 
 
-<< 'MULTILINE-COMMENT'
-   printf '\n============================================================\n'
+    printf '\n============================================================\n'
     printf '[+] copy sources.list.d non-kali repositories to /etc/apt/'
     printf '============================================================\n\n'
 rm -r /etc/apt/sources.list.d
 wget -P '/etc/apt/' https://raw.githubusercontent.com/leighton-0/kali-setup/master/sources.list.d 
 sleep $s
-MULTILINE-COMMENT
-
-# enable command aliasing
-#shopt -s expand_aliases
-
-# skip prompts in apt-upgrade, etc.
-export DEBIAN_FRONTEND=noninteractive
-alias apt-get='yes "" | apt-get -o Dpkg::Options::="--force-confdef" -y'
-apt-get update
 
 
-# make sure Downloads folder exists
-mkdir -p ~/Downloads 2>/dev/null
+
 
 # if we're not on a headless system
 ##if [ -n "$DISPLAY" ]
@@ -123,7 +121,7 @@ printf '     - airgeddon\n
 printf '     - tree\n
 printf '============================================================\n\n'
 
-sleep $s
+sleep $ss
 
 apt-get install \
     realtek-rtl88xxau-dkms \

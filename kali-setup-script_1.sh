@@ -55,7 +55,7 @@ systemctl enable changemac@wlan0.service
 sleep $s
 
 
-<< 'MULTILINE-COMMENT'
+
 
    printf '\n============================================================\n'
     #printf '[+] copy sources.list.d non-kali repositories to /etc/apt/'
@@ -77,7 +77,7 @@ apt-get update
 # make sure Downloads folder exists
 mkdir -p ~/Downloads 2>/dev/null
 
-
+<< 'MULTILINE-COMMENT'
 # if we're not on a headless system
 if [ -n "$DISPLAY" ]
 then

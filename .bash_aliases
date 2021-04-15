@@ -95,7 +95,7 @@ ping2 () {
 	#wget ~$ curl http://api.db-ip.com/v2/free/203.219.72.15
 	#./iploc.sh
 	
-}
+#}
 #=================================
 
 ----------IP Address & Location

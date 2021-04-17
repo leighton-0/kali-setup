@@ -61,6 +61,14 @@ systemctl enable changemac@wlan0.service
 sleep $s
 
 
+ printf '\n============================================================\n'
+    printf '[+] Auto Random Host name\n'
+    printf '============================================================\n\n'
+ #touch /etc/systemd/system/changemac@.service
+wget -P /bin https://raw.githubusercontent.com/leighton-0/kali-setup/master/newhostname
+chmod +x /usr/bin/newhostname
+sleep $s
+
 
     printf '\n============================================================\n'
     printf '[+] copy sources.list.d non-kali repositories to /etc/apt/\n'

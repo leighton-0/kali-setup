@@ -64,9 +64,9 @@ sleep $s
  printf '\n============================================================\n'
     printf '[+] Auto Random Host name\n'
     printf '============================================================\n\n'
- #touch /etc/systemd/system/changemac@.service
-wget -P kali/usr/bin https://raw.githubusercontent.com/leighton-0/kali-setup/master/newhostname
-chmod +x /usr/bin/newhostname
+git clone https://github.com/tasooshi/namechanger.git
+cd namechanger
+make install
 sleep $s
 
 

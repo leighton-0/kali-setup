@@ -65,7 +65,7 @@ sleep $s
     printf '[+] Auto Random Host name\n'
     printf '============================================================\n\n'
  #touch /etc/systemd/system/changemac@.service
-wget -P /usr/bin https://raw.githubusercontent.com/leighton-0/kali-setup/master/newhostname
+wget -P kali/usr/bin https://raw.githubusercontent.com/leighton-0/kali-setup/master/newhostname
 chmod +x /usr/bin/newhostname
 sleep $s
 

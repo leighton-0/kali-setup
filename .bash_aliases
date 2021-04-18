@@ -56,7 +56,6 @@ upd () {
 	grep VERSION /etc/os-release > lb4upd.txt && uname -a >> lb4upd.txt
 	echo "Update Kali"
 	apt update && apt -y full-upgrade
-	apt-get clean && apt-get update && apt-get dist-upgrade
 	apt-get update --fix-missing
 	apt autoremove
 	grep VERSION /etc/os-release > laftupd.txt && uname -a >> laftupd.txt

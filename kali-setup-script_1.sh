@@ -138,6 +138,7 @@ apt-get install \
     net-tools \
     vncsnapshot \
     hcxtools \
+    airgeddon \
     tree 
 
     printf '\n============================================================\n'
@@ -220,10 +221,10 @@ printf '============================================================\n\n'
 git clone https://github.com/FluxionNetwork/fluxion
 
 
-printf '\n============================================================\n'
-printf '[+] Install Airgeddon  --  Airgeddon installation\n'
-printf '============================================================\n\n'
-git clone --depth 1 https://github.com/v1s1t0r1sh3r3/airgeddon.git
+#printf '\n============================================================\n'
+#printf '[+] Install Airgeddon  --  Airgeddon installation\n'
+#printf '============================================================\n\n'
+#git clone --depth 1 https://github.com/v1s1t0r1sh3r3/airgeddon.git
 
 
 

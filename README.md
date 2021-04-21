@@ -12,7 +12,7 @@ curl -k -s https://raw.githubusercontent.com/leighton-0/kali-setup/master/kali-s
 ~~~
 Load ethers files into wireshark:-
 
-touch .config/wireshark/ethers && wget -P /.config/wireshark/ethers https://raw.githubusercontent.com/leighton-0/kali-setup/MAC_resolution
+touch .config/wireshark/ethers && wget -P /.config/wireshark/ethers https://raw.githubusercontent.com/leighton-0/kali-setup/ethers
 ~~~
 Load profile files into wireshark:-
 wget -P /.config/wireshark/profiles https://raw.githubusercontent.com/leighton-0/kali-setup/profiles

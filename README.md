@@ -11,6 +11,7 @@ Load the complete script:-
 curl -k -s https://raw.githubusercontent.com/leighton-0/kali-setup/master/kali-setup-script_1.sh | bash
 ~~~
 Load eithers and profile files into wireshark:-
+
 touch .config/wireshark/eithers && wget -P /.config/wireshark/eithers https://raw.githubusercontent.com/leighton-0/kali-setup/MAC_resolution
 ~~~
 Load profile files into wireshark:-

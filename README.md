@@ -10,9 +10,9 @@ Prepares Kali as a standard configuration
 Load the complete script:-
 curl -k -s https://raw.githubusercontent.com/leighton-0/kali-setup/master/kali-setup-script_1.sh | bash
 ~~~
-Load eithers and profile files into wireshark:-
+Load ethers and profile files into wireshark:-
 
-touch .config/wireshark/eithers && wget -P /.config/wireshark/eithers https://raw.githubusercontent.com/leighton-0/kali-setup/MAC_resolution
+touch .config/wireshark/ethers && wget -P /.config/wireshark/ethers https://raw.githubusercontent.com/leighton-0/kali-setup/MAC_resolution
 ~~~
 Load profile files into wireshark:-
 wget -P /.config/wireshark/profiles https://raw.githubusercontent.com/leighton-0/kali-setup/profiles

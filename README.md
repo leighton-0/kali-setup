@@ -2,16 +2,16 @@
 
 Prepares Kali as a standard configuration
 
-## STILL IN DEVELOPMENT
+## NOTE STILL IN DEVELOPMENT
 
-## NOTE: THIS SCRIPT ASSUMES YOU ARE RUNNING AS ROOT (LIKE IN THE OLD DAYS)
-## NON-ROOT USERS ARE NOT SUPPORTED
+## NOTE: THIS SCRIPT ASSUMES YOU ARE RUNNING AS ROOT
 
-## One-liner:
-(don't forget to reboot after the script finishes :)
 ~~~
+Load the complete script:-
 curl -k -s https://raw.githubusercontent.com/leighton-0/kali-setup/master/kali-setup-script_1.sh | bash
 ~~~
+Load eithers and profile files into wireshark
+
 
 ## Full feature list:
 

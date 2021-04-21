@@ -12,6 +12,8 @@ curl -k -s https://raw.githubusercontent.com/leighton-0/kali-setup/master/kali-s
 ~~~
 Load eithers and profile files into wireshark
 wget -P /.config/wireshark/ https://raw.githubusercontent.com/leighton-0/kali-setup/eithers
+~~~
+Load profile files into wireshark
 wget -P /.config/wireshark/profiles https://raw.githubusercontent.com/leighton-0/kali-setup/profiles
 ~~~
 

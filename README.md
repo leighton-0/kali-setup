@@ -11,6 +11,9 @@ Load the complete script:-
 curl -k -s https://raw.githubusercontent.com/leighton-0/kali-setup/master/kali-setup-script_1.sh | bash
 ~~~
 Load eithers and profile files into wireshark
+wget -P /.config/wireshark/ https://raw.githubusercontent.com/leighton-0/kali-setup/eithers
+wget -P /.config/wireshark/profiles https://raw.githubusercontent.com/leighton-0/kali-setup/profiles
+~~~
 
 
 ## Full feature list:

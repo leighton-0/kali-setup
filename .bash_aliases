@@ -17,6 +17,7 @@ alias lmacc0='/usr/local/bin/./lmacc0.sh'
 alias his='history | grep'
 alias vpns='nordvpn status'
 alias vpndc='nordvpn connect Double_VPN'
+alias ethers='cat >> /.config/wireshark/ethers
 
 
 

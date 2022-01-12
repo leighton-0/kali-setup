@@ -10,7 +10,7 @@ T**his Script is based on the repository by BlackLantern https://github.com/blac
 
 ~~~
 Load the complete script:-
-curl -k -s https://raw.githubusercontent.com/leighton-0/kali-setup/master/kali-setup-script_1.sh | bash
+curl -k -s https://raw.githubusercontent.com/leighton-0/kali-setup/master/kali-setup-script_2.sh | bash
 ~~~
 Load ethers files into wireshark:-
 

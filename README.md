@@ -28,7 +28,14 @@ wget -P /.config/wireshark/profiles https://raw.githubusercontent.com/leighton-0
     Enables details logging of terminal sessions
         Including ALL OUTPUT (saved to ~/Logs)
     Installs the following:
+        Gedit
+        NordVPN
+        Auto MAC spoof on start up
+        Auto Random Host name
+        copy sources.list.d non-kali repositories 
+        Config Terminator to launch in 3 paynes
         CrackMapExec (from GitHub)
+       ** Above Addided by Leighton**
         Impacket (from GitHub)
         Bloodhound (from GitHub)
         EAPhammer (from GitHub)

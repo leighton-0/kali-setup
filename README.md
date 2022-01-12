@@ -2,6 +2,8 @@
 
 Prepares Kali as a standard configuration
 
+T**his Script is based on the repository by BlackLantern https://github.com/blacklanternsecurity/kali-setup-script. All credit for the followiinf goes to him**
+
 ## NOTE STILL IN DEVELOPMENT
 
 ## NEEDS ROOT
@@ -23,34 +25,37 @@ wget -P /.config/wireshark/profiles https://raw.githubusercontent.com/leighton-0
 
 ## Full feature list:
 
-1. Enables details logging of terminal sessions
-	- Including ALL OUTPUT (saved to ~/Logs)
-1. Installs the following:
-	1. CrackMapExec (from GitHub)
-	1. Impacket (from GitHub)
-	1. Bloodhound (from GitHub)
-	1. EAPhammer (from GitHub)
-	1. patator (network brute-force tool)
-	1. PCredz
-	1. Gowitness
-	1. EavesARP
-	1. bettercap
-	1. Firefox (official non-ESR version)
-	1. Chromium
-	1. Sublime Text
-	1. zmap
-	1. LibreOffice
-	1. htop
-	1. Remmina
-	1. gnome-screenshot
-	1. realtek-rtl88xxau-dkms (ALFA wireless drivers)
-	1. i3 + XFCE desktop environment (optional)
-1. Updates system
-1. Removes gnome-software
-1. Disables auto-lock
-1. Enables tap-to-click
-1. Initializes Metasploit database
-1. Installs rad BLS wallpaper
+    Enables details logging of terminal sessions
+        Including ALL OUTPUT (saved to ~/Logs)
+    Installs the following:
+        CrackMapExec (from GitHub)
+        Impacket (from GitHub)
+        Bloodhound (from GitHub)
+        EAPhammer (from GitHub)
+        patator (network brute-force tool)
+        PCredz
+        Gowitness
+        EavesARP
+        bettercap
+        docker
+        Firefox (official non-ESR version)
+        Chromium
+        Sublime Text
+        BoostNote
+        golang (plus environment)
+        zmap
+        LibreOffice
+        htop
+        Remmina
+        gnome-screenshot
+        realtek-rtl88xxau-dkms (ALFA wireless drivers)
+        i3 + XFCE desktop environment (optional)
+    Updates system
+    Removes gnome-software
+    Disables auto-lock
+    Enables tap-to-click
+    Initializes Metasploit database
+    Installs rad BLS wallpaper
 
 
 Original script by  blacklanternsecurity I have deleted some to the apps and customised it to my needs

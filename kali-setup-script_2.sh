@@ -1,5 +1,7 @@
 #!/bin/bash
 
+<<comment out
+
 usage()
 {
     cat <<EOF
@@ -660,6 +662,9 @@ EOF
     apt-get install gconf2 gvfs-bin
     dpkg -i boostnote.deb
     rm boostnote.deb
+    
+    comment out
+    # end of multi line comment out
     
     printf '\n============================================================\n'
     printf '[+] Following added by Leighton\n'

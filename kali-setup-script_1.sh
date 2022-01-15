@@ -1,4 +1,7 @@
 #!/bin/bash
+# need to add
+# 1. mega >> https://forums.kali.org/showthread.php?60269-Mega-Desktop-App-(MEGAsync)&p=109521
+# 2. sherlock
 
 # sets the variable sleep to slow down script
 s=9

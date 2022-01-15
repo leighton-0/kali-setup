@@ -1,7 +1,20 @@
 #!/bin/bash
+
+<< multi-line comment
 # need to add
 # 1. mega >> https://forums.kali.org/showthread.php?60269-Mega-Desktop-App-(MEGAsync)&p=109521
 # 2. sherlock
+#    installation
+# clone the repo
+$ git clone https://github.com/sherlock-project/sherlock.git
+
+# change the working directory to sherlock
+$ cd sherlock
+
+# install the requirements
+$ python3 -m pip install -r requirements.txt
+
+multi-line comment
 
 # sets the variable sleep to slow down script
 s=9

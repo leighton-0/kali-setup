@@ -17,6 +17,9 @@ $ python3 -m pip install -r requirements.txt
  3 clipit
   apt install clipit 3 clipit
   apt install clipit
+  
+  install phoneinfoga
+  set up root login
 
 multi-line comment
 
